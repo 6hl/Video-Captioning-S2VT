@@ -108,7 +108,6 @@ def BLEU(s,t,flag = False):
 if __name__ == "__main__" :
     test = json.load(open('./MLDS_hw2_1_data/testing_label.json','r'))
     output = sys.argv[1]
-    #output = "result.txt"
     result = {}
     with open(output,'r') as f:
         for line in f:

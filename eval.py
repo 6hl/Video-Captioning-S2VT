@@ -7,21 +7,18 @@ torch.manual_seed(14)
 data_location = sys.argv[1]
 output_filename = sys.argv[2]
 
-# test_data_path = "./MLDS_hw2_1_data/testing_data/"
-# test_labels = "./MLDS_hw2_1_data/testing_label.json"
 test_data_path = f"{str(data_location)}/testing_data/"
 test_labels = str(f"{str(data_location)}/testing_label.json")
 ds = torch.load("./vocab.dat")
 
-batch_size = 10 # 32
+batch_size = 10
 hidden_dim = 256
 vocab_size = len(ds.tokens_idx)
 detokenize_dict = ds.tokens_idx
 feat_size = 4096
 seq_length = 80
 caption_length = ds.clength
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = "cpu"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 print(f"Using device: {device}")
 drop = 0.5

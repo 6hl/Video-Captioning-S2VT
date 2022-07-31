@@ -15,7 +15,6 @@ feat_size = 4096
 seq_length = 80
 caption_length = ds.clength
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#device = "cpu"
 drop = 0.3
 lr=1e-4
 
