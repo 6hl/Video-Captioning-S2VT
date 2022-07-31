@@ -9,4 +9,4 @@ BLEU Score: 0.677
 1. Training using `main.py`
 2. Testing using `eval.py`
 
-#### Vocab and Model defined in `utils.py`
+Vocab and Model defined in `utils.py`
